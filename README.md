@@ -144,11 +144,19 @@ Atom > Snippets
 
 then copy and paste this save and exit. Create a new javascript file.
 
+## imc , rscm, rccm
+
 ```javascript
 '.source.js':
   'Snippet Name':
     'prefix': 'imc'
     'body': "import $1 from '@material-ui/core/$1';$0"
+  'reactStatelessMaterial':
+    'prefix': 'rscm'
+    'body': "import React from 'react';\nimport PropTypes from 'prop-types';\nimport withStyles from '@material-ui/core/styles/withStyles';\n\nconst styles = theme =>({\n\troot: {\n\t\tflexGrow: 1\n\t}\n});\n\nconst ${1:${TM_FILENAME_BASE}} = (props) => {\n\tconst { classes } = props;\n\n\treturn (\n\t\t<div className={classes.root}>\n\t\t\t$0\n\t\t</div>\n\t);\n};\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\tclasses: PropTypes.object.isRequired,\n};\n\nexport default withStyles(styles)(${1:${TM_FILENAME_BASE}});"
+  'reactclass':
+    "prefix": "rccm",
+    "body": "import React, { Component } from 'react';\nimport PropTypes from 'prop-types';\nimport withStyles from '@material-ui/core/styles/withStyles';\n\nconst styles = theme =>({\n\troot: {\n\t\tflexGrow: 1\n\t}\n});\n\nclass ${1:${TM_FILENAME_BASE}} extends Component {\n\trender() { \n\t\tconst { classes } = this.props;\n\t\treturn (\n\t\t\t<div className={classes.root}>\n\t\t\t\t$0\n\t\t\t</div>\n\t);\n\t}\n};\n\n${1:${TM_FILENAME_BASE}}.propTypes = {\n\tclasses: PropTypes.object.isRequired,\n};\n\nexport default withStyles(styles)(${1:${TM_FILENAME_BASE}});"
 ```
 
 then type `imc` then `Tab`. After you are done typing press `Tab` one more time to go to the end of the line
