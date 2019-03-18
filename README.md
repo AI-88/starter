@@ -136,13 +136,13 @@ export default withStyles(styles)(App);
 
 # How to add snippets to atom
 
-> then copy and paste this save and exit. Create a new javascript file.
-
-```sh
 From the top of the menu Atom menu.
 
+```sh
 Atom > Snippets
 ```
+
+then copy and paste this save and exit. Create a new javascript file.
 
 ```javascript
 '.source.js':
