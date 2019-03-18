@@ -131,3 +131,24 @@ App.propTypes = {
 
 export default withStyles(styles)(App);
 ```
+
+---
+
+# How to add snippets to atom
+
+> then copy and paste this save and exit. Create a new javascript file.
+
+```sh
+From the top of the menu Atom menu.
+
+Atom > Snippets
+```
+
+```javascript
+'.source.js':
+  'Snippet Name':
+    'prefix': 'imc'
+    'body': "import $1 from '@material-ui/core/$1';$0"
+```
+
+then type `imc` then `Tab`. After you are done typing press `Tab` one more time to go to the end of the line
